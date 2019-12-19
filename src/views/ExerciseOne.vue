@@ -25,6 +25,9 @@
           <v-card-text>
             <v-text-field v-model="msg" label="Vue variables dynamically update"></v-text-field>
           </v-card-text>
+          <v-card-actions>
+      <v-btn @click = "refresh()" text>Refresh</v-btn>
+      </v-card-actions>
         </v-card>
       </v-col>
 
@@ -40,6 +43,13 @@
       <v-col cols="12">
         <b>Value of newMsg:</b> {{ newMsg }}
       </v-col>
+       <v-col cols="5">
+        <v-card>
+          <v-card-text>
+            <v-text-field v-model="newMsg" label="Vue variables dynamically update"></v-text-field>
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
 
     <v-divider class="my-4"/>
@@ -49,14 +59,30 @@
         <h2>Part 3</h2>
         Now, type in "Vue.js rocks!" for the msg text field and see what happens...
       </v-col>
-      <v-col cols="6" v-if="msg=='Vue.js rocks!'">
+      <v-col cols="4" v-if="msg=='Vue.js rocks!'">
         <v-img
         alt="hayko"
         src="../assets/hayko.jpg"
         max-width="500"
         max-height="300"/>
       </v-col>
+      <v-col cols="4" v-else-if="msg=='Vue.js kinda rocks!'">
+        <v-img
+        alt="mko"
+        src="../assets/mko.jpeg"
+        max-width="500"
+        max-height="300"/>
+      </v-col>
+        <v-col cols="4" v-else>
+        <v-img
+        alt="vue"
+        src="../assets/logo.png"
+        max-width="500"
+        max-height="300"/>
+      </v-col>
+    
     </v-row>
+    
 
     <v-divider class="my-4"/>
 
@@ -123,7 +149,13 @@ export default {
   name: 'ExerciseOne',
 
   data: () => ({
-    msg: 'Hello'
-  })
+    msg: 'Hello',
+    newMsg : 'Hi'
+  }),
+  methods: {
+    refresh: function () {
+      this.msg = 'Hello'
+    }
+  }
 }
 </script>

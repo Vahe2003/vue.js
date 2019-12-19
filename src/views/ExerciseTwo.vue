@@ -17,7 +17,7 @@
         to the column below.
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+       <Counter></Counter>
       </v-col>
     </v-row>
 
@@ -41,7 +41,7 @@
         you click on one, does it affect the count of the others?
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+        <Counter/>
       </v-col>
     </v-row>
 
@@ -55,7 +55,7 @@
         <a href="https://vuejs.org/v2/guide/components-slots.html" target="_blank">For reference</a>
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+       <Counter v-bind:color="one_color">Submit</Counter>
       </v-col>
     </v-row>
 
@@ -69,7 +69,8 @@
         <a href="https://vuetifyjs.com/en/components/selects" target="_blank">For reference</a>
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+        <v-select v-model="one_color" :items = "colors" label="Colors"></v-select>
+        <Counter v-bind:color="one_color">Color Button</Counter>
       </v-col>
     </v-row>
 
@@ -111,10 +112,21 @@
 </template>
 
 <script>
+import Counter from '@/components/Counter.vue'
 export default {
-  name: 'ExerciseTwo',
-
+  name: 'exercise-two',
+  components: {
+    Counter
+  },
   data: () => ({
+    count: 0,
+     colors: [
+          { text: 'Red', value: 'red' },
+          { text: 'Green', value: 'green' },
+          { text: 'Blue', value: 'blue' },
+          { text: 'Yellow', value: 'yellow' },
+        ],
+    one_color: null
   })
 }
 </script>
