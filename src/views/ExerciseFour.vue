@@ -20,7 +20,7 @@
         column below so we can see what it looks like.
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+       <Login/>
       </v-col>
     </v-row>
 
@@ -45,7 +45,7 @@
         Just as above, import it and add it below so we can see what it looks like.
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+        <Register/>
       </v-col>
     </v-row>
 
@@ -110,10 +110,22 @@
 </template>
 
 <script>
+import Login from '@/components/Login.vue'
+import Register from '@/components/Register.vue'
 export default {
   name: 'ExerciseFour',
 
   data: () => ({
-  })
+
+  }),
+   components: {
+    Login,
+    Register
+  },
+  methods: {
+    add(){
+      
+    }
+  }
 }
 </script>
