@@ -20,7 +20,7 @@
         <b>List of students:</b>
         <v-list rounded>
            <v-subheader >STUDENTS</v-subheader>
-          <v-list-item v-for="student in students" :key="student">
+            <v-list-item v-for="student in students" :key="student">
             <v-icon>mdi-account</v-icon> {{student.name}} {{student.surname}}
           </v-list-item>
         </v-list>
