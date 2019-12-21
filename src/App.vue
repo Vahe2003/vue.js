@@ -1,23 +1,19 @@
 <template>
   <v-app>
     <v-content>
-      <v-container>
-        <v-app-bar app>
+          <v-toolbar app color="primary" dark>
            <img :src="require('@/assets/logo.png')" height="40"/>
-           <v-toolbar-title class = "mx-4">Vue</v-toolbar-title>
+           <v-toolbar-title>ue</v-toolbar-title>
            <v-spacer></v-spacer>
-          <div class="hidden-sm-and-down">
-          <router-link class="mx-2" to="/">1. Basic Variables</router-link>
-          <router-link class="mx-2" to="/exercise-two">2. Composing Components</router-link>
-          <router-link class="mx-2" to="/exercise-three">3. V-for, Forms</router-link>
-          <router-link class="mx-2" to="/exercise-four">4. Form Validation</router-link>
-          <router-link class="mx-2" to="/exercise-five">5. App Bar</router-link>
-          </div>
-          <div class="hidden-md-and-up">
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
-           </div>
-        </v-app-bar>
-      </v-container>
+            <v-toolbar-items class="hidden-sm-and-down">
+            <v-btn class="mx-1" text to="/">1. Basic Variables</v-btn >
+            <v-btn class="mx-1" text to="/exercise-two">2. Composing Components</v-btn >
+            <v-btn class="mx-1" text to="/exercise-three">3. V-for, Forms</v-btn >
+            <v-btn class="mx-1" text to="/exercise-four">4. Form Validation</v-btn >
+            <v-btn class="mx-1" text to="/exercise-five">5. App Bar</v-btn >
+          </v-toolbar-items>
+          <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+          </v-toolbar>
       <router-view/>
     </v-content>
   </v-app>
