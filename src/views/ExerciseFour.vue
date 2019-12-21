@@ -92,7 +92,16 @@
         <a href="https://vuetifyjs.com/en/components/tabs" target="_blank">For reference</a>
       </v-col>
       <v-col cols="8">
-        <!-- Your code here -->
+        <v-tabs grow = "true">
+          <v-tab>Register</v-tab>
+          <v-tab-item>
+            <Register/>
+          </v-tab-item>
+          <v-tab>Login</v-tab>
+          <v-tab-item>
+            <Login/>
+          </v-tab-item>
+        </v-tabs>
       </v-col>
     </v-row>
 

@@ -43,7 +43,7 @@
           cols="12"
           md="4"
         >
-      <v-text-field autofocus v-model = "name" label="Name">   
+      <v-text-field clearable autofocus v-model = "name" label="Name">   
        </v-text-field>
         </v-col>
 
@@ -51,7 +51,7 @@
           cols="12"
           md="4"
         >
-      <v-text-field v-model = "surname" label="Surname">   
+      <v-text-field clearable v-model = "surname" label="Surname">   
        </v-text-field>
       </v-col>
        <v-col
@@ -122,7 +122,9 @@ export default {
   name: null,
   methods: {
     add: function () {
-      this.students.push({name:this.name, surname:this.surname})
+      this.students.push({name:this.name, surname:this.surname}),
+      this.name = null,
+      this.surname = null
     }
   }
   
