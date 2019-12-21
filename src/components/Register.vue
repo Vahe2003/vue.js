@@ -33,7 +33,7 @@ export default {
       email: null,
       email_confirm: null,
       valid:true,
-      emailRules: [
+  emailRules: [
     v => !!v || 'E-mail is required',
     v => /.+@.+/.test(v) || 'E-mail must be valid'
 ],
